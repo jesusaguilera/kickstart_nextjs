@@ -10,7 +10,7 @@ const animations = {
   },
   leftEntry: {
     position: "relative",
-    left: -400,
+    left: 400,
     opacity: 0,
   },
   leftAnimate: {

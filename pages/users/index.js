@@ -4,19 +4,16 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 // Components
-import Header from "../../components/Header";
 import MainLayout from "../../components/MainLayout";
-import Footer from "../../components/Footer";
 
 const Users = (props) => {
   return (
     <>
-      <Header title="Bio" />
       <MainLayout wrapperClass="wrapper__bio">
         <h1>Users</h1>
         {props.data.results.map((user) => {
           return (
-            <div className="o-padding--default">
+            <div className="o-padding--default" key={user.id}>
               <motion.img
                 src={user.picture.thumbnail}
                 whileHover={{
@@ -45,7 +42,6 @@ const Users = (props) => {
           <a>Home</a>
         </Link>
       </MainLayout>
-      <Footer />
     </>
   );
 };

@@ -9,8 +9,6 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <div>
-      <Header />
-
       <MainLayout>
         <h1>Welcome!</h1>
         <Link href="/about">
@@ -20,10 +18,9 @@ export default function Home() {
           <a>Bio</a>
         </Link>
         <Link href="/users">
-          <a>Users</a>
+          <a>Users Api</a>
         </Link>
       </MainLayout>
-      <Footer />
     </div>
   );
 }

@@ -9,16 +9,12 @@ import Footer from "../../components/Footer";
 
 const Bio = (props) => {
   return (
-    <>
-      <Header title="Bio" />
-      <MainLayout wrapperClass="wrapper__bio">
-        <h1>Bio</h1>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </MainLayout>
-      <Footer />
-    </>
+    <MainLayout wrapperClass="wrapper__bio">
+      <h1>Bio</h1>
+      <Link href="/">
+        <a>Home</a>
+      </Link>
+    </MainLayout>
   );
 };
 

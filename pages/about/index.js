@@ -9,16 +9,12 @@ import Footer from "../../components/Footer";
 
 const About = (props) => {
   return (
-    <>
-      <Header />
-      <MainLayout title="About">
-        <h1>About</h1>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </MainLayout>
-      <Footer />
-    </>
+    <MainLayout title="About">
+      <h1>About</h1>
+      <Link href="/">
+        <a>Home</a>
+      </Link>
+    </MainLayout>
   );
 };
 
