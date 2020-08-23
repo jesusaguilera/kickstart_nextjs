@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
 
       <MainLayout>
-        <h1>Welcome!</h1>
+        <h1>Ups!, 404 error</h1>
         <Link href="/about">
           <a>About</a>
         </Link>

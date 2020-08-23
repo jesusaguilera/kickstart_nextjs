@@ -1,7 +1,25 @@
-import '../styles/globals.css'
+// Dependencies
+import { motion } from "framer-motion";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+// Styles
+import "../assets/scss/main.scss";
 
-export default MyApp
+// Animations
+import animations from "../animations";
+
+console.log(animations);
+
+const MyApp = ({ Component, pageProps, router }) => {
+  return (
+    <motion.div
+      key={router.route}
+      initial="leftEntry"
+      animate="leftAnimate"
+      variants={animations}
+    >
+      <Component {...pageProps} />
+    </motion.div>
+  );
+};
+
+export default MyApp;

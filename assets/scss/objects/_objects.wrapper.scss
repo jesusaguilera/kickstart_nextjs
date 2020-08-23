@@ -1,0 +1,18 @@
+/* ==========================================================================
+   #WRAPPER
+   ========================================================================== */
+
+.o-wrapper {
+  transition: all 750ms ease-in-out;
+  background-color: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7.2rem;
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
+}
