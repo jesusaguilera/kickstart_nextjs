@@ -9,7 +9,12 @@ import MainLayout from "../../components/MainLayout";
 const Users = (props) => {
   return (
     <>
-      <MainLayout wrapperClass="wrapper__bio">
+      <MainLayout
+        wrapperClass="wrapper__bio"
+        pageTransitionEntry="opacityEntry"
+        pageTransitionAnimate="opacityAnimate"
+        pageTransitionExit="opacityExit"
+      >
         <h1>Users</h1>
         {props.data.results.map((user) => {
           return (
@@ -46,7 +51,7 @@ const Users = (props) => {
   );
 };
 export const getStaticProps = async () => {
-  const res = await fetch("https://randomuser.me/api/");
+  const res = await fetch("https://randomuser.me/api/?results=5");
   const data = res.ok && (await res.json());
 
   return {

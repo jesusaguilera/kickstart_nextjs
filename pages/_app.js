@@ -1,10 +1,6 @@
 // Dependencies
 import React from "react";
 import Head from "next/head";
-import { motion, AnimatePresence } from "framer-motion";
-
-// Animations
-import animations from "../animations";
 
 // Styles
 import "../assets/scss/main.scss";
@@ -32,17 +28,7 @@ const MyApp = ({ Component, pageProps, router }) => {
         <meta name="description" content="My first Nextjs page" />
       </Head>
       <Header />
-      <AnimatePresence exitBeforeEnter>
-        <motion.div
-          key={router.route}
-          initial="leftEntry"
-          animate="leftAnimate"
-          exit="leftExit"
-          variants={animations}
-        >
-          <Component {...pageProps} />
-        </motion.div>
-      </AnimatePresence>
+      <Component {...pageProps} />
       <Footer />
     </>
   );
