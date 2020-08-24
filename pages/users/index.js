@@ -4,37 +4,23 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 // Animations
-import animations from "../../animations";
+import { fadeInLeft, stagger, easing } from "../../assets/animations";
 
 // Components
 import MainLayout from "../../components/MainLayout";
 
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 3,
-      delayChildren: 3,
-    },
-  },
-};
-
 const Users = (props) => {
   return (
     <>
-      <MainLayout
-        wrapperClass="wrapper__bio"
-        pageTransitionEntry="opacityEntry"
-        pageTransitionAnimate="opacityAnimate"
-        pageTransitionExit="opacityExit"
-      >
-        <h1>Users</h1>
+      <MainLayout>
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <h1>Users</h1>
+        </motion.div>
         <motion.div variants={stagger}>
           {props.data.results.map((user) => {
             return (
               <motion.div
-                initial="leftEntry"
-                animate="leftAnimate"
-                variants={animations}
+                variants={fadeInLeft}
                 className="o-padding--default"
                 key={user.id}
               >

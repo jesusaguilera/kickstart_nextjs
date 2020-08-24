@@ -4,37 +4,15 @@ import classNames from "classnames";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
-// Animations
-import animations from "../animations";
-
 const MainLayout = (props) => {
   let wrapperClasses = classNames("o-wrapper", props.wrapperClass);
   const router = useRouter();
 
   return (
     <motion.main
-      initial={
-        props.noPageTransition
-          ? false
-          : !props.pageTransitionEntry
-          ? "leftEntry"
-          : props.pageTransitionEntry
-      }
-      animate={
-        props.noPageTransition
-          ? false
-          : !props.pageTransitionAnimate
-          ? "leftAnimate"
-          : props.pageTransitionAnimate
-      }
-      exit={
-        props.noPageTransition
-          ? false
-          : !props.pageTransitionExit
-          ? "leftExit"
-          : props.pageTransitionExit
-      }
-      variants={animations}
+      initial="initial"
+      animate="animate"
+      exit={{ opacity: 0 }}
       className={wrapperClasses}
     >
       <div className="container">{props.children}</div>
