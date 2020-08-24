@@ -1,20 +1,31 @@
+const easing = [0.6, -0.05, 0.01, 0.99];
+
 const animations = {
   opacityEntry: {
     opacity: 0,
     transition: {
-      duration: 2,
+      duration: 0.6,
+      ease: easing,
+      // staggerChildren: 0.1,
+      // delayChildren: 0.5,
     },
   },
   opacityAnimate: {
     opacity: 1,
     transition: {
-      duration: 2,
+      duration: 0.6,
+      ease: easing,
+      // staggerChildren: 0.1,
+      // delayChildren: 0.5,
     },
   },
   opacityExit: {
     opacity: 0,
     transition: {
-      type: "spring",
+      duration: 0.6,
+      ease: easing,
+      // staggerChildren: 0.1,
+      // delayChildren: 0.5,
     },
   },
   leftEntry: {
@@ -22,8 +33,11 @@ const animations = {
     left: 400,
     opacity: 0,
     transition: {
-      // duration: 2,
-      type: "spring",
+      duration: 0.6,
+      ease: easing,
+      // staggerChildren: 0.1,
+      // delayChildren: 0.5,
+      // type: "spring",
     },
   },
   leftAnimate: {
@@ -31,8 +45,11 @@ const animations = {
     opacity: 1,
     left: 0,
     transition: {
-      // duration: 2,
-      type: "spring",
+      duration: 0.6,
+      ease: easing,
+      // staggerChildren: 0.1,
+      // delayChildren: 0.5,
+      // type: "spring",
     },
   },
   leftExit: {
@@ -41,8 +58,11 @@ const animations = {
     left: -400,
     opacity: 0,
     transition: {
-      type: "spring",
-      // duration: 2,
+      duration: 0.6,
+      ease: easing,
+      // staggerChildren: 0.1,
+      // delayChildren: 0.5,
+      // type: "spring",
     },
   },
 };
