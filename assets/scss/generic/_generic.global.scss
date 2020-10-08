@@ -5,19 +5,44 @@
 *,
 *::after,
 *::before {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+  outline: 0px solid;
 
-    padding: 0;
-    margin: 0;
+  &:hover,
+  &:active,
+  &:focus,
+  &:visited {
     outline: 0px solid;
-    box-sizing: border-box; 
-
-    &:hover,
-    &:active,
-    &:focus, 
-    &:visited{
-
-        outline: 0px solid;
-
-    }
-
+  }
 }
+
+// Scroll
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--grey-light);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: var(--grey-medium);
+  border-radius: 0.8rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--grey-dark);
+}
+// @Scroll
