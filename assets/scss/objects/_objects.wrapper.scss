@@ -9,5 +9,11 @@
     -ms-overflow-style: none;  /* Hide scrollbar on IE and Edge */
     scrollbar-width: none;  /* Hide scrollbar on Firefox */
     scroll-snap-type: y mandatory;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
   }
 }
