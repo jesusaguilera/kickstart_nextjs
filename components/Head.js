@@ -1,10 +1,11 @@
 // Dependencies
 import React from "react";
-import Head from "next/head";
+import PropTypes from "prop-types";
+import HeadNext from "next/head";
 
-const Header = (props) => {
+const Head = (props) => {
   return (
-    <Head>
+    <HeadNext>
       <title>{props.title ? props.title : "My Nextjs Page"}</title>
       <link rel="icon" href="/favicon.ico" />
       <meta
@@ -13,8 +14,12 @@ const Header = (props) => {
         key="viewport"
       />
       <meta name="description" content="My first Nextjs page" />
-    </Head>
+    </HeadNext>
   );
 };
 
-export default Header;
+Head.propTypes = {
+  title: PropTypes.string
+}
+
+export default Head;

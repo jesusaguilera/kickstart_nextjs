@@ -1,12 +1,18 @@
 // Dependencies
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 
-const Header = (props) => {
+// Components
+import Nav from "./Nav";
+
+const Header = () => {
   return (
     <header className="c-header">
-      <h3>header</h3>
+      <Link href="/">Home</Link>
+      <Nav />
     </header>
   );
 };
+
 export default Header;
