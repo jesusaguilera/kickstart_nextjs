@@ -9,7 +9,7 @@ import Nav from "./Nav";
 const Header = () => {
   return (
     <header className="c-header">
-      <Link href="/">Home</Link>
+      <Link href="/"><a>Home</a></Link>
       <Nav />
     </header>
   );

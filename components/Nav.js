@@ -4,14 +4,14 @@ import Link from "next/link";
 const Nav = () => {
   return (
     <nav className="c-nav">
-        <Link href="/about" className="c-nav__link">
-          <a>About</a>
+        <Link href="/about">
+          <a className="c-nav__link">About</a>
         </Link>
-        <Link href="/bio" className="c-nav__link">
-          <a>Bio</a>
+        <Link href="/bio">
+          <a className="c-nav__link">Bio</a>
         </Link>
-        <Link href="/users" className="c-nav__link">
-          <a>Users Api</a>
+        <Link href="/users">
+          <a className="c-nav__link">Users Api</a>
         </Link>
     </nav>
   );

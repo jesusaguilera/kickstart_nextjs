@@ -1,12 +1,10 @@
 // Dependencies
-import React from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 import { motion } from "framer-motion";
-import { useRouter } from "next/router";
 
 const MainLayout = (props) => {
   let wrapperClasses = classNames("o-wrapper", props.wrapperClass);
-  const router = useRouter();
 
   return (
     <motion.main
@@ -15,8 +13,13 @@ const MainLayout = (props) => {
       exit={{ opacity: 0 }}
       className={wrapperClasses}
     >
-      <div className="container">{props.children}</div>
+      {props.children}
     </motion.main>
   );
 };
+
+MainLayout.propTypes = {
+  wrapperClass: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
+}
+
 export default MainLayout;

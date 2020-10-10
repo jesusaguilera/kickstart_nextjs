@@ -1,11 +1,10 @@
 /* ==========================================================================
-   #CONTAINER
+   #SCROLL SANAPPING
    ========================================================================== */
 
-.o-container {
-  border-bottom: 1px solid black;
-  width: 100vw;
-  min-height: 100vh;
-  padding-top: 7.2rem;
-}
+.o-scroll-snapping {
 
+  &--align-start {
+    scroll-snap-align: start;
+  }
+}
