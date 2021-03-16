@@ -4,6 +4,8 @@
 
 input {
 
+  filter: none;
+
   &:-internal-autofill-selected {
     -webkit-appearance: none;
     background-color: transparent !important;
